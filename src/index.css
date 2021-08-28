@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Playfair+Display:wght@700&display=swap");
+*{
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Kaisei+Decol";
+  margin:0;
+ font-size: 100 px;
 }
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.App {
+  font-family: "Kaisei+Decol";
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+  width: 240px;
+  background: #696969;
+  box-shadow: 10px 5px 5px #DCDCDC ;
+}
+.keyboard{
+  display: grid;
+  grid-template-columns: repeat(4,60px);
+  grid-auto-rows: minmax(30px , auto);
+}
+.keyboard button{
+  background-color:	#C0C0C0;
+  border:none;
+  color: white;
+}
+input[type="text"]{
+
+  height:75px;
+  width:236px;
+  background-color:	#808080 ;
+  border:0px;
+  text-align: right ;
+  font-size: 25px ;
+}
+#equal{
+  grid-column: 3/5;
+  grid-row:5;
+  border-radius: 0 0 9px 0;
+  background-image: linear-gradient(to right,#ff007f ,yellow);
+  
+}
+#dot{
+  border-radius: 0 0 0 9px;
+}
+.navbar button{
+  align-items: right;
+  background-color:	#696969;
+  border:none;
+  margin:0px;
+  color:white;
+  }
+  .navbar button:hover{
+    cursor: pointer;
+  }
