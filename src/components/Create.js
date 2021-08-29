@@ -21,21 +21,21 @@ const Create = () => {
         }
     }
     // const handleclear=()=>{
-
+    //     setResult(result.slice(0,-1))
     // }
     const handleAllclear =()=>setResult("");
-    // const backspace=()  =>{
-      
-    // }  
+    const backspace=()  =>{
+        setResult(result.slice(0,result.length-1));
+    }  
     return (  
         <div className='container'>
             <form>
                 <input type="text" value={result}></input>
             </form>
             <div className="keyboard" >
-                <button value='null'style={{backgroundColor:'#696969'}} >CE</button>
+                <button value='CE'style={{backgroundColor:'#696969'}} >CE</button>
                 <button onClick={handleAllclear} style={{backgroundColor:'#696969',color:'#ff007f'}} >C</button>
-                <button  style={{backgroundColor:'#696969'}}><BsBackspace/></button>
+                <button onClick={backspace} style={{backgroundColor:'#696969'}}><BsBackspace/></button>
                 <button onClick={handleclick} value="/" style={{backgroundColor:'#696969'}}>&divide;</button>
                 <button onClick={handleclick} value="7">7</button>
                 <button onClick={handleclick} value="8">8</button>
